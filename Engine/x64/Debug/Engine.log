@@ -1,0 +1,69 @@
+﻿Build started 3/2/2017 8:45:41 AM.
+     1>Project "D:\Work\VS2015\BoggleGame\Engine\Engine.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"../SFML-2.3.2/include" /ZI /nologo /W3 /WX- /sdl /Od /D SFML_STATIC /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt Engine.cpp
+         Engine.cpp
+     1>d:\work\vs2015\bogglegame\engine\engine.cpp(181): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+     1>d:\work\vs2015\bogglegame\engine\engine.cpp(190): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+     1>d:\work\vs2015\bogglegame\engine\engine.cpp(311): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+     1>d:\work\vs2015\bogglegame\engine\engine.cpp(337): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+     1>d:\work\vs2015\bogglegame\engine\engine.cpp(345): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Work\VS2015\BoggleGame\Engine\x64\Debug\Engine.exe" /INCREMENTAL /NOLOGO /LIBPATH:"../SFML-2.3.2/lib" "sfml-graphics-s-d.lib" "sfml-window-s-d.lib" "sfml-audio-s-d.lib" "sfml-network-s-d.lib" "sfml-system-s-d.lib" opengl32.lib freetype.lib jpeg.lib winmm.lib gdi32.lib ws2_32.lib ogg.lib vorbisfile.lib vorbis.lib flac.lib openal32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\Work\VS2015\BoggleGame\Engine\x64\Debug\Engine.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Work\VS2015\BoggleGame\Engine\x64\Debug\Engine.lib" /MACHINE:X64 x64\Debug\Engine.obj
+         x64\Debug\stdafx.obj
+     1>sfml-graphics-s-d.lib(BlendMode.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(Color.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(Font.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(GLCheck.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(GLExtensions.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(Image.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(RenderStates.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(RenderTarget.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(RenderWindow.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(Shader.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(Texture.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(TextureSaver.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(Transform.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(Transformable.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(View.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(Vertex.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(GLLoader.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(Shape.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(CircleShape.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(RectangleShape.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(Text.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-graphics-s-d.lib(VertexArray.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-window-s-d.lib(Context.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-window-s-d.lib(GlContext.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-window-s-d.lib(GlResource.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-window-s-d.lib(Joystick.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-window-s-d.lib(JoystickManager.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-window-s-d.lib(SensorManager.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-window-s-d.lib(VideoMode.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-window-s-d.lib(Window.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-window-s-d.lib(WindowImpl.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-window-s-d.lib(WglContext.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-window-s-d.lib(WglExtensions.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-window-s-d.lib(JoystickImpl.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-window-s-d.lib(SensorImpl.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-window-s-d.lib(VideoModeImpl.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-window-s-d.lib(WindowImplWin32.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-system-s-d.lib(Clock.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-system-s-d.lib(Err.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-system-s-d.lib(Lock.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-system-s-d.lib(Mutex.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-system-s-d.lib(Sleep.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-system-s-d.lib(String.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-system-s-d.lib(ThreadLocal.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-system-s-d.lib(Time.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-system-s-d.lib(ClockImpl.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-system-s-d.lib(MutexImpl.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-system-s-d.lib(SleepImpl.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>sfml-system-s-d.lib(ThreadLocalImpl.cpp.obj) : warning LNK4204: 'D:\Work\VS2015\BoggleGame\Engine\x64\Debug\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+         Engine.vcxproj -> D:\Work\VS2015\BoggleGame\Engine\x64\Debug\Engine.exe
+     1>Done Building Project "D:\Work\VS2015\BoggleGame\Engine\Engine.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.79

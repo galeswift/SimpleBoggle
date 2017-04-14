@@ -1,0 +1,26 @@
+﻿Build started 3/2/2017 9:00:11 AM.
+     1>Project "D:\Work\VS2015\BoggleGame\Engine\Engine.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"../SFML-2.3.2/include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D SFML_STATIC /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Release\\" /Fd"x64\Release\vc140.pdb" /Gd /TP /errorReport:prompt Engine.cpp
+         Engine.cpp
+     1>Engine.cpp(185): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+     1>Engine.cpp(194): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+     1>Engine.cpp(316): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+     1>Engine.cpp(342): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+     1>Engine.cpp(350): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+     1>Engine.cpp(364): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+     1>Engine.cpp(371): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Work\VS2015\BoggleGame\Engine\x64\Release\Engine.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"../SFML-2.3.2/lib" "sfml-graphics-s.lib" "sfml-window-s.lib" "sfml-audio-s.lib" "sfml-network-s.lib" "sfml-system-s.lib" opengl32.lib freetype.lib jpeg.lib winmm.lib gdi32.lib ws2_32.lib ogg.lib vorbisfile.lib vorbis.lib flac.lib openal32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\Work\VS2015\BoggleGame\Engine\x64\Release\Engine.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Work\VS2015\BoggleGame\Engine\x64\Release\Engine.lib" /MACHINE:X64 x64\Release\Engine.obj
+         x64\Release\stdafx.obj
+         Generating code
+         1 of 587 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+           0 functions were new in current compilation
+           1 functions had inline decision re-evaluated but remain unchanged
+         Finished generating code
+         Engine.vcxproj -> D:\Work\VS2015\BoggleGame\Engine\x64\Release\Engine.exe
+     1>Done Building Project "D:\Work\VS2015\BoggleGame\Engine\Engine.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.31
