@@ -15,6 +15,69 @@
 #define LETTER_SIZE (DICE_SIZE)
 #define LETTER_ADJUSTMENT (sf::Vector2f(0,-40))
 
+class FreeNode
+{
+public:
+	FreeNode* m_next;
+};
+
+class SimpleMemPool
+{
+public:
+	SimpleMemPool(size_t size, size_t count)
+		: m_size(size)
+		, m_count(count)
+	{
+		m_size = m_size < sizeof(FreeNode) ? sizeof(FreeNode) : m_size;		
+		size_t poolSize = m_size * m_count;
+		m_root = (FreeNode*)malloc(poolSize);		
+		m_head = m_root;
+		Reset();
+	}
+
+	~SimpleMemPool()
+	{
+		free(m_root);
+	}
+
+	void* Alloc()
+	{
+		FreeNode* result = m_head;
+		m_head = m_head->m_next;
+		m_freeCount--;
+		return result;		
+	}
+
+	void Free(void* ptr)
+	{
+		FreeNode* prevHead = m_head;
+		m_head = (FreeNode*)ptr;
+		m_head->m_next = prevHead;
+		m_freeCount++;
+	}
+
+	void Reset()
+	{
+		FreeNode* cur = m_root;
+		for (int i = 0; i < m_count-1; i++)
+		{
+			cur->m_next = (FreeNode*)((char*)cur + m_size);
+			cur = cur->m_next;		
+		}
+		cur->m_next = NULL;
+		m_freeCount = m_count;
+	}
+
+	size_t m_size;
+	size_t m_count;
+	size_t m_freeCount;
+
+	FreeNode* m_root;
+	FreeNode* m_head;
+};
+
+SimpleMemPool* s_TrieNodePool = NULL;
+
 class Random
 {
 public:
@@ -58,11 +121,16 @@ public:
 
 class TrieNode
 {
-public:
-	TrieNode(char val)
-		: m_char(val)
-		, m_isWord(false)
+public:	
+	TrieNode(char val)		
 	{
+		Init(val);
+	}
+
+	void Init(char val)
+	{
+		m_char = val;
+		m_isWord = false;
 		for (int i = 0; i < NUM_LETTERS; i++)
 		{
 			m_children[i] = NULL;
@@ -82,7 +150,8 @@ public:
 		{
 			if (m_children[idx] == NULL)
 			{
-				m_children[idx] = new TrieNode(word[0]);
+				m_children[idx] = (TrieNode*)s_TrieNodePool->Alloc();
+				m_children[idx]->Init(word[0]);
 			}
 			
 			m_children[idx]->AddWord(word + 1, length - 1);
@@ -178,7 +247,8 @@ public:
 	{
 		if (m_root == NULL)
 		{
-			m_root = new TrieNode(' ');
+			m_root = (TrieNode*)s_TrieNodePool->Alloc();
+			m_root->Init(' ');			
 		}
 
 		TrieNode* current = m_root;
@@ -225,6 +295,7 @@ public:
 			m_words.push_back(current);
 		}
 	}
+
 
 	std::vector<std::string> m_words;
 };
@@ -420,9 +491,11 @@ public:
 };
 
 int main()
-{
+{		
 	sf::Clock clock;
 	sf::Time timing = clock.restart();
+	s_TrieNodePool = new SimpleMemPool(sizeof(TrieNode), 300000); // rough count of how many nodes we needS
+
 	Dictionary dict("Words/words.txt");
 	timing = clock.restart();
 	printf("Time to populate dictionary [%dms]\n", timing.asMilliseconds());
@@ -445,9 +518,7 @@ int main()
 	boggleBoard.m_origin = sf::Vector2f(100, 100);
 	
 
-	sf::RenderWindow window(sf::VideoMode(1920, 1080), "Welcome to SDVA 203!");
-	sf::CircleShape shape(100.f);	
-	shape.setFillColor(sf::Color::Green);
+	sf::RenderWindow window(sf::VideoMode(1920, 1080), "Our boggle game!");	
 	while (window.isOpen())
 	{
 		sf::Time dt = clock.restart();
@@ -486,6 +557,8 @@ int main()
 		boggleBoard.Draw(window);
 		window.display();
 	}
+
+	delete s_TrieNodePool;
 
 	return 0;
 }
